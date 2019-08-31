@@ -5,6 +5,7 @@ import logging
 import pandas as pd
 from sklearn.externals import joblib
 from sklearn.preprocessing import StandardScaler
+from datetime import date
 
 app = Flask(__name__)
 LOG = create_logger(app)
@@ -62,7 +63,10 @@ def predict():
     scaled_payload = scale(inference_payload)
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
+    today = date.today()   
     # TO DO:  Log the output prediction value
+    LOG.info(f"CSV - Date of prediction: {today}")
+    LOG.info(f"CSV - Adding the logging of prediction: {prediction}")
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
