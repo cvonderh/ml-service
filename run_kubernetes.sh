@@ -17,4 +17,4 @@ kubectl get pods
 # kubectl expose deployment devops-app --port=8000 --name=prediction-http
 # kubectl expose deployment/devops-app --type="NodePort" --port 8000 --name=prediction-http
 # kubectl expose deployment/devops-app --port 8000 target-port=80 --name=prediction-http
-kubectl expose devops-app --port 8000 --name=prediction-http
+kubectl expose deployment devops-app --port 8000 --name=prediction-http
