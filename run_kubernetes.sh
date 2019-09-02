@@ -11,7 +11,7 @@ dockerpath=cvonderh/udac-devops
 # kubectl run --image=index.docker.io/cvonderh/udac-devops devops-app --port=8000
 # kubectl run --image=nginx devops-app --port=8000
 # kubectl create deployment devops-app --image=index.docker.io/cvonderh/udac-devops --port=8000
-kubectl run --image=cvonderh/udac-devops:devops devops-app --port=8000
+kubectl run --image=cvonderh/udac-devops:devops devops-app --port=80
 #kubectl run --image=$dockerpath devops --port=80 --env="DOMAIN=cluster"
 # Step 3:
 # List kubernetes pods
