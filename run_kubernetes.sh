@@ -18,4 +18,4 @@ kubectl run --image=cvonderh/udac-devops:devops devops-app --port=8000
 kubectl get pods
 # Step 4:
 # Forward the container port to a host
-# kubectl expose deployment devops-app --port=8080 --name=prediction-http
+kubectl expose deployment devops-app --port=8080 --name=prediction-http
