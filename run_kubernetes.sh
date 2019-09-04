@@ -8,7 +8,7 @@
 dockerpath=cvonderh/udac-devops
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run --image=cvonderh/udac-devops:devops devops-app --port=80
+kubectl run --image=cvonderh/udac-devops:devops devops-app --port=8000
 # Step 3:
 # List kubernetes pods
 kubectl get pods
