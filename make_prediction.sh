@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PORT=8000
+PORT=32672
 echo "Port: $PORT"
 
 IP=$(minikube ip)
