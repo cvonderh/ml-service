@@ -20,3 +20,7 @@ kubectl get pods
 kubectl expose deployment devops-app --name=prediction-http
 
 kubectl expose deployment devops-app --type=LoadBalancer --port=8000
+
+kubectl port-forward devops-app-797679cc64-p7x75 80:8000
+
+kubectl port-forward devops-app 80:8000
