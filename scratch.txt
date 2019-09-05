@@ -1,0 +1,28 @@
+Name:              devops-app
+Namespace:         default
+Labels:            run=devops-app
+Annotations:       <none>
+Selector:          run=devops-app
+Type:              ClusterIP
+IP:                10.100.182.80
+Port:              <unset>  80/TCP
+TargetPort:        80/TCP
+Endpoints:         172.17.0.4:80
+Session Affinity:  None
+Events:            <none>
+
+
+ame:                     devops-app
+Namespace:                default
+Labels:                   run=devops-app
+Annotations:              <none>
+Selector:                 run=devops-app
+Type:                     NodePort
+IP:                       10.102.26.22
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31184/TCP
+Endpoints:                172.17.0.4:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
