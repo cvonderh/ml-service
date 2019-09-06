@@ -5,6 +5,8 @@ echo "Port: $PORT"
 
 IP=$(minikube ip)
 
+URL=(minikube service hello-minikube --url)
+
 # POST method predict
 curl -d '{  
    "CHAS":{  
@@ -27,4 +29,5 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-     -X POST http://$IP:$PORT/predict
+#     -X POST http://$IP:$PORT/predict
+      -X POST http://$URL/predict
