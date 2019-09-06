@@ -1,1 +1,25 @@
-<paste log output from Kubernetes-mediated prediction, here>
+
+(.devops) craigtdwork@devops-vm-4:~/udacity/DevOps_Microservices/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+kubectl run --generator=deployment/apps.v1 is DEPRECATED and will be removed in a future version. Use kubectl run --generator=run-pod/v1 or kubectl create instead.
+deployment.apps/devops-app created
+No resources found.
+service/devopsclusterip exposed
+
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  10m   default-scheduler  Successfully assigned default/devops-app-797679cc64-dfssn to minikube
+  Normal  Pulling    10m   kubelet, minikube  Pulling image "cvonderh/udac-devops:devops"
+  Normal  Pulled     90s   kubelet, minikube  Successfully pulled image "cvonderh/udac-devops:devops"
+  Normal  Created    89s   kubelet, minikube  Created container devops-app
+  Normal  Started    86s   kubelet, minikube  Started container devops-app
+(.devops) craigtdwork@devops-vm-4:~/udacity/DevOps_Microservices/project-ml-microservice-kubernetes$ kubectl get pods
+NAME                          READY   STATUS    RESTARTS   AGE
+devops-app-797679cc64-dfssn   1/1     Running   0          10m
+(.devops) craigtdwork@devops-vm-4:~/udacity/DevOps_Microservices/project-ml-microservice-kubernetes$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
