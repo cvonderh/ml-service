@@ -17,10 +17,13 @@ kubectl get pods
 # kubectl expose deployment devops-app --port=8000 --name=prediction-http
 # kubectl expose deployment/devops-app --type="NodePort" --port 8000 --name=prediction-http
 # kubectl expose deployment/devops-app --port 8000 target-port=80 --name=prediction-http
-kubectl expose deployment devops-app --name=prediction-http
+#kubectl expose deployment devops-app --name=prediction-http
 
-kubectl expose deployment devops-app --type=LoadBalancer --port=8000
+#kubectl expose deployment devops-app --type=LoadBalancer --port=8000
 
-kubectl port-forward devops-app-797679cc64-p7x75 80:8000
+#kubectl port-forward devops-app-797679cc64-p7x75 80:8000
 
-kubectl port-forward devops-app 80:8000
+#kubectl port-forward devops-app 80:8000
+
+# Working version with the 
+kubectl expose deployment devops-app --name=devopsclusterip --port=8000 --target-port=80 --type=NodePort
