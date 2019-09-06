@@ -5,7 +5,7 @@ echo "Port: $PORT"
 
 IP=$(minikube ip)
 
-URL=$(minikube service hello-minikube --url)
+URL=$(minikube service devopsclusterip --url)
 
 # POST method predict
 curl -d '{  
