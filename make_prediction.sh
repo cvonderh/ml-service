@@ -29,5 +29,4 @@ curl -d '{
    }
 }'\
      -H "Content-Type: application/json" \
-#     -X POST http://$IP:$PORT/predict
       -X POST $URL/predict
