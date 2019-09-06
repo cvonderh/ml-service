@@ -30,4 +30,4 @@ curl -d '{
 }'\
      -H "Content-Type: application/json" \
 #     -X POST http://$IP:$PORT/predict
-      -X POST http://$URL/predict
+      -X POST $URL/predict
