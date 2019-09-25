@@ -43,7 +43,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
    To excute the script run ``` sh ./app.py  ```
 2. Run in Docker:  `./run_docker.sh`
     To execute from container, first you you will need to issue ```sh ./run_docker.sh ``` to build from a container.  Keep the     conatiner up and running once the build process completes.  Open a seperate terminal and execute ``` ./make_prediction.sh ``` to test the conatiner.
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh`.  Follow steps below **"Kubernetes Steps"** and then issue ```./make_prediction.sh```
 
 ### Kubernetes Steps
 
