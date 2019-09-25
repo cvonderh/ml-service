@@ -27,17 +27,22 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 * Create a virtualenv and activate it
   Execute the following commands
+  
   ```
   python3 -m venv ~/.devops
   source ~/.devops/bin/activate
   ```
+  If your cli starts with ``` (.devops)``` you have activated the virtualenv.
+  
   
 * Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
+   To excute the script run ``` sh ./app.py  ```
 2. Run in Docker:  `./run_docker.sh`
+    To execute from container, first you you will need to issue ```sh ./run_docker.sh ``` to build from a container.  Keep the     conatiner up and running once the build process completes.  Open a seperate terminal and execute ``` ./make_prediction.sh ``` to test the conatiner.
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ### Kubernetes Steps
