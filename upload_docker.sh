@@ -11,7 +11,9 @@ dockerpath=cvonderh/udac-devops
 # Step 2: 
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker tag b66a992991e6 
+cat ./docs/pw.txt | docker login --username cvonderh --password-stdin
+
+docker tag 95a8ffc01c82 cvonderh/udac-devops:latest
 
 # Step 3:
 # Push image to a docker repository
